@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+.App {
+  text-align: center;
+}
+
+.material-button {
+  /* Core button styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+  /* Default text color */
+  color: #fff;
+  /* Default background color */
+  background-color: #6200ee; /* A shade of purple, like Material Design's primary */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  width: 100%;
+}
+
+.material-button:hover {
+  background-color: #5600c7; /* Darker shade on hover */
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.material-button:active {
+  background-color: #4900b2; /* Even darker shade on active */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+}
+
+.material-button:disabled {
+  background-color: rgba(98, 0, 238, 0.3); /* Lighter, semi-transparent color */
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Variants (you can combine these with the base class) */
+.material-button--outlined {
+  background-color: transparent;
+  border: 1px solid #6200ee;
+  color: #6200ee;
+}
+
+.material-button--outlined:hover {
+  background-color: rgba(98, 0, 238, 0.08); /* Light background on hover for outlined */
+  color: #6200ee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.material-button--outlined:active{
+   background-color: rgba(98, 0, 238, 0.16);
+   color: #6200ee;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+   transform: translateY(0);
+}
+
+.material-button--text {
+  background-color: transparent;
+  color: #6200ee;
+  padding: 0.75rem; /*make the padding the same as the default button*/
+}
+
+.material-button--text:hover {
+  background-color: rgba(98, 0, 238, 0.08); /* Very light background on hover */
+  color: #6200ee;
+  transform: translateY(-1px);
+}
+
+.material-button--text:active {
+  background-color: rgba(98, 0, 238, 0.16); /* Even lighter background on active */
+  color: #6200ee;
+  transform: translateY(0);
+}
+
+/* Sizes */
+.material-button--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.material-button--large {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+}
+
+/* Icon support (optional, if you want to include icons) */
+.material-button i {
+  margin-right: 0.5rem; /* Adjust spacing as needed */
+}
